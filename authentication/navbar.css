@@ -1,0 +1,23 @@
+body{
+    background-image: url(../images/background_image1.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    width: 100vw;
+    height: 100vh;
+
+
+}
+.container-fluid{
+    background-color: none;
+}
+.navbar{
+    background-color: none;
+}
+#signUpBtn,#loginBtn{
+    background-color:#010142;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 0px;
+
+}
