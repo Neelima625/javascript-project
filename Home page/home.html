@@ -8,85 +8,85 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav id="navbar1" class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid" id="nav1">
-          <a class="navbar-brand" href="#"><img src="https://www.candystore.com/cdn/shop/files/brand-candy-store.svg?v=1710528542&width=210" alt="" width="200px" height="80px"></a>
+          <a class="navbar-brand" href="#candy-container"><img src="https://www.candystore.com/cdn/shop/files/brand-candy-store.svg?v=1710528542&width=210" alt="" width="180px" height="70px"></a>
           </button>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
             <div class="nav1-icons">
-              <a href=""><i class="fas fa-user"></i></a>
+              <a href=""><i class="fa-solid fa-heart"></i></a>
               <a href=""><i class="fas fa-shopping-cart"></i></a>
             </div>
           </div>
         </div>
-      </nav>
-      
-      
-      <nav  class="navbar navbar-expand-lg bg-body-tertiary">
-        <div id="navbar2" class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+    </nav>
+    <nav  class="navbar navbar-expand-lg bg-body-tertiary">
+      <div id="navbar2" class="container-fluid">
+          <a class="navbar-brand" href="#candy-container">Candy Store</a> <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarCategories">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="allCandies">All Candies</a>
-                </li>
-                <!-- Flavours -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">By Flavour</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item category-item" data-category="flavour" href="#">Strawberry</a></li>
-                        <li><a class="dropdown-item category-item" data-category="flavour" href="#">Orange</a></li>
-                        <li><a class="dropdown-item category-item" data-category="flavour" href="#">Chocolate</a></li>
-                        <li><a class="dropdown-item category-item" data-category="flavour" href="#">Mango</a></li>
-                        <li><a class="dropdown-item category-item" data-category="flavour" href="#">Coffee</a></li>
-                        <li><a class="dropdown-item category-item" data-category="flavour" href="#">Cherry</a></li>
-                    </ul>
-                </li>
-                <!-- Colors -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">By Color</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item category-item" data-category="color" href="#">Pink</a></li>
-                        <li><a class="dropdown-item category-item" data-category="color" href="#">Orange</a></li>
-                        <li><a class="dropdown-item category-item" data-category="color" href="#">Brown</a></li>
-                        <li><a class="dropdown-item category-item" data-category="color" href="#">Green</a></li>
-                        <li><a class="dropdown-item category-item" data-category="color" href="#">Yellow</a></li>
-                        <li><a class="dropdown-item category-item" data-category="color" href="#">Red</a></li>
-                    </ul>
-                </li>
-                <!-- Brands -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">By Brand</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item category-item" data-category="brand" href="#">Hershey</a></li>
-                        <li><a class="dropdown-item category-item" data-category="brand" href="#">Nestle</a></li>
-                        <li><a class="dropdown-item category-item" data-category="brand" href="#">Cadbury</a></li>
-                        <li><a class="dropdown-item category-item" data-category="brand" href="#">M&M</a></li>
-                        <li><a class="dropdown-item category-item" data-category="brand" href="#">Jolly Rancher</a></li>
-                    </ul>
-                </li>
-                <!-- Types -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">By Type</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item category-item" data-category="type" href="#">Jelly</a></li>
-                        <li><a class="dropdown-item category-item" data-category="type" href="#">Bars</a></li>
-                        <li><a class="dropdown-item category-item" data-category="type" href="#">Lollipops</a></li>
-                        <li><a class="dropdown-item category-item" data-category="type" href="#">Wafers</a></li>
-                        <li><a class="dropdown-item category-item" data-category="type" href="#">Gummies</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        </div>
-      </nav> 
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+              <ul  id="navitems" class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li  class="nav-item"> <a class="nav-link" href="#candy-container" id="allCandies">All Candies</a> </li>
+                  <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false"> By Flavour </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item category-item" data-category="flavour" id="strawberry_flavour" href="#candy-container">Strawberry</a>
+                          </li>
+                          <li><a class="dropdown-item category-item" data-category="flavour" id="orange_flavour" href="#candy-container">Orange</a></li>
+                          <li><a class="dropdown-item category-item" data-category="flavour" id="chocolate_flavour" href="#candy-container">Chocolate</a>
+                          </li>
+                          <li><a class="dropdown-item category-item" data-category="flavour" id="mango_flavour" href="#candy-container">Mango</a></li>
+                          <li><a class="dropdown-item category-item" data-category="flavour" id="coffee_flavour" href="#candy-container">Coffee</a></li>
+                          <li><a class="dropdown-item category-item" data-category="flavour" id="cherry_flavour" href="#candy-container">Cherry</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false"> By Color </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item category-item" data-category="color" id="pink" href="#candy-container">Pink</a></li>
+                          <li><a class="dropdown-item category-item" data-category="color" id="orange" href="#candy-container">Orange</a></li>
+                          <li><a class="dropdown-item category-item" data-category="color" id="brown" href="#candy-container">Brown</a></li>
+                          <li><a class="dropdown-item category-item" data-category="color" id="green" href="#candy-container">Green</a></li>
+                          <li><a class="dropdown-item category-item" data-category="color" id="yellow" href="#candy-container">Yellow</a></li>
+                          <li><a class="dropdown-item category-item" data-category="color" id="red" href="#candy-container">Red</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false"> By Brand </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item category-item" data-category="brand" id="hershey" href="#candy-container">Hershey</a></li>
+                          <li><a class="dropdown-item category-item" data-category="brand" id="nestley" href="#candy-container">Nestle</a></li>
+                          <li><a class="dropdown-item category-item" data-category="brand" id="cadbury" href="#candy-container">Cadbury</a></li>
+                          <li><a class="dropdown-item category-item" data-category="brand" id="m&m" href="#candy-container">M&M</a></li>
+                          <li><a class="dropdown-item category-item" data-category="brand" id="jollyrancher" href="#candy-container">Jolly Rancher</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false"> By Type </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item category-item" data-category="type" id="jelly-candies" href="#candy-container">Jelly</a></li>
+                          <li><a class="dropdown-item category-item" data-category="type" id="bars" href="#candy-container">Bars</a></li>
+                          <li><a class="dropdown-item category-item" data-category="type" id="lollipops" href="#candy-container">Lollipops</a></li>
+                          <li><a class="dropdown-item category-item" data-category="type" id="wafers" href="#candy-container">Wafers</a></li>
+                          <li><a class="dropdown-item category-item" data-category="type" id="gummies" href="#candy-container">Gummies</a></li>
+                          <li><a class="dropdown-item category-item" data-category="type" id="candy" href="#candy-container">candys</a></li>
+                      </ul>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
       
         
      
@@ -102,13 +102,12 @@
             
         </div>
         <img class="parent1-right" src="https://www.candystore.com/cdn/shop/files/AdobeStock_309225806_1.png?v=1707776098&width=1500" alt="">
-      </div>
-     
-      
+       
+        </div>  
+        <div class="card" id="candy-container">
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-     
-      <script src="https://kit.fontawesome.com/your-fontawesome-key.js" crossorigin="anonymous"></script>
-      <script type="module" src="./home.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   
+    <script type="module" src="./home.js"></script>
 </body>
 </html>
