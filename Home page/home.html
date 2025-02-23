@@ -15,10 +15,10 @@
         <div class="container-fluid" id="nav1">
           <a class="navbar-brand" href="#candy-container"><img src="https://www.candystore.com/cdn/shop/files/brand-candy-store.svg?v=1710528542&width=210" alt="" width="180px" height="70px"></a>
           </button>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
+          <form class="d-flex" role="search" id="searchForm">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
             <div class="nav1-icons">
               <a href=""><i class="fa-solid fa-heart"></i></a>
               <a href=""><i class="fas fa-shopping-cart"></i></a>
@@ -76,11 +76,11 @@
                           data-bs-toggle="dropdown" aria-expanded="false"> By Type </a>
                       <ul class="dropdown-menu">
                           <li><a class="dropdown-item category-item" data-category="type" id="jelly-candies" href="#candy-container">Jelly</a></li>
-                          <li><a class="dropdown-item category-item" data-category="type" id="bars" href="#candy-container">Bars</a></li>
-                          <li><a class="dropdown-item category-item" data-category="type" id="lollipops" href="#candy-container">Lollipops</a></li>
-                          <li><a class="dropdown-item category-item" data-category="type" id="wafers" href="#candy-container">Wafers</a></li>
-                          <li><a class="dropdown-item category-item" data-category="type" id="gummies" href="#candy-container">Gummies</a></li>
-                          <li><a class="dropdown-item category-item" data-category="type" id="candy" href="#candy-container">candys</a></li>
+                          <li><a class="dropdown-item category-item" data-category="type" id="bars" href="#candy-container">Bar</a></li>
+                          <li><a class="dropdown-item category-item" data-category="type" id="lollipops" href="#candy-container">Lollipop</a></li>
+                          <li><a class="dropdown-item category-item" data-category="type" id="wafers" href="#candy-container">Wafer</a></li>
+                          <li><a class="dropdown-item category-item" data-category="type" id="gummies" href="#candy-container">Gummy</a></li>
+                          <li><a class="dropdown-item category-item" data-category="type" id="candy" href="#candy-container">candy</a></li>
                       </ul>
                   </li>
               </ul>
@@ -104,7 +104,10 @@
         <img class="parent1-right" src="https://www.candystore.com/cdn/shop/files/AdobeStock_309225806_1.png?v=1707776098&width=1500" alt="">
        
         </div>  
-        <div class="card" id="candy-container">
+        <div class="card" id="candy-container"></div>
+        <div>
+            <p class="footer">&copy;Copyrights 2008-25. All Rights Reserved. Privacy|Terms|Infringement</p>
+        </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
    
