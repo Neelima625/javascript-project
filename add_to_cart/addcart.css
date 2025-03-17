@@ -1,0 +1,131 @@
+
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+#candyDetails {
+    width: 100%;
+    overflow-x: auto; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+img {
+    max-width: 50px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.button, .remove-btn, .wishlist-btn {
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#totalContainer {
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+
+    img {
+        max-width: 40px;
+        margin-right: 5px;
+    }
+
+    .button, .remove-btn, .wishlist-btn {
+        padding: 3px 6px;
+        margin: 3px;
+        font-size: 12px;
+    }
+
+    #totalContainer h3 {
+        font-size: 16px;
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        margin: 15px;
+    }
+
+    table {
+        font-size: 15px;
+    }
+
+    th, td {
+        padding: 7px;
+    }
+
+    img {
+        max-width: 45px;
+        margin-right: 8px;
+    }
+
+    .button, .remove-btn, .wishlist-btn {
+        padding: 4px 8px;
+        margin: 4px;
+        font-size: 13px;
+    }
+
+    #totalContainer h3 {
+        font-size: 18px;
+    }
+}
+
+
+@media (min-width: 1025px) {
+    body {
+        margin: 20px;
+    }
+
+    table {
+        font-size: 16px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    img {
+        max-width: 50px;
+        margin-right: 10px;
+    }
+
+    .button, .remove-btn, .wishlist-btn {
+        padding: 5px 10px;
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    #totalContainer h3 {
+        font-size: 20px;
+    }
+}

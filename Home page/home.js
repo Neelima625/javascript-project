@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 candiesToDisplay.forEach(candy => {
                     const candyDiv = document.createElement('div');
                     let addToCartBtn = document.createElement('button');
+                    addToCartBtn.classList.add('addToCartBtn')
                     addToCartBtn.textContent = "Add to Cart";
                     
                     candyDiv.classList.add('candy-item');

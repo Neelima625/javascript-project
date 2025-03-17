@@ -1,0 +1,42 @@
+
+    body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fdfdfd;
+        box-sizing: border-box;
+    }
+.card{
+    display: flex;
+    gap:30px;
+    justify-content: center;
+    padding: 10%;
+}
+.card img{
+    width:40vw;
+    height:500px;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+}
+.shop-btns{
+    display: flex;
+   justify-content: space-between;
+    padding:5px 10% ;
+
+}
+.shop-btns button{
+    padding: 10px 30px;
+    font-size: large;
+    border: 1px solid rgba(56, 55, 55, 0.801);
+    background-color: rgb(240, 159, 201);
+    border-radius: 3px;
+}
+.card-body button{
+    border: 0px;
+    background-color: rgb(122, 194, 212);
+    padding: 5px;
+    border-radius: 3px;
+    font-size: large;
+}
