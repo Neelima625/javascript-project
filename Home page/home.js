@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     addToCartBtn.classList.add('addToCartBtn')
                     addToCartBtn.textContent = "Add to Cart";
                     
+                    
                     candyDiv.classList.add('candy-item');
                     candyDiv.style.cursor = 'pointer';
                     candyDiv.dataset.candy = JSON.stringify(candy);

@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Table header
         const headerRow = table.insertRow();
-        const headers = ['Details', 'Price', 'Quantity', 'Actions'];
+        const headers = ['Image', 'Name', 'Flavour', 'Brand', 'Price', 'Quantity', 'Actions'];
         headers.forEach(headerText => {
             const header = document.createElement('th');
             header.textContent = headerText;
@@ -159,15 +159,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const row = table.insertRow();
             row.style.border = '1px solid #ddd';
 
-            const detailsCell = row.insertCell();
+            const imageCell = row.insertCell();
+            const nameCell = row.insertCell();
+            const flavourCell = row.insertCell();
+            const brandCell = row.insertCell();
             const priceCell = row.insertCell();
             const quantityCell = row.insertCell();
             const actionsCell = row.insertCell();
 
-            detailsCell.innerHTML = `
-                <img src="${candy.image}" alt="${candy.name}" style="max-width: 50px; height: auto; vertical-align: middle; margin-right: 10px;">
-                <span>${candy.name}</span>
-            `;
+            imageCell.innerHTML = `<img src="${candy.image}" alt="${candy.name}" style="max-width: 50px; height: auto;">`;
+            nameCell.textContent = candy.name;
+            flavourCell.textContent = candy.flavour;
+            brandCell.textContent = candy.brand;
             priceCell.textContent = `${candy.price}₹`;
 
             quantityCell.innerHTML = `
@@ -194,7 +197,6 @@ document.addEventListener('DOMContentLoaded', () => {
         attachEventListeners();
     }
 
-   
     function attachEventListeners() {
         document.querySelectorAll('.remove-btn').forEach(button => {
             button.addEventListener('click', (event) => {
@@ -256,5 +258,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Initial UI rendering
     updateCartUI();
 });
