@@ -240,7 +240,15 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
+document.getElementById('checkoutBtn')?.addEventListener('click', () => {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let totalPrice = 0;
+    cart.forEach(item => {
+        totalPrice += item.price * item.quantity;
+    });
+    localStorage.setItem('totalPrice', totalPrice.toString());
+    window.location.href = 'buynow.html';
+});
     function moveToWishlist(name) {
         const itemIndex = cart.findIndex(candy => candy.name === name);
         if (itemIndex !== -1) {

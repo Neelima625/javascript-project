@@ -1,273 +1,288 @@
-*{
-  font-family: arial;
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
-}
-.parent-1{
-  color:#010142;
-  display: flex;
-  flex-direction: row;
- 
-}
-.parent1-left{
-  background-color:#aed6f1 ;
- 
-  width: 50%;
-}
-.parent1-right{
-  width: 50%;
-  height: auto;
-}
-.p1-text1{
-  font-size: 3rem;
+  * {
+            font-family: Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
 
-}
-.p1-text2{
-  font-size: 2rem;
-}
-.p1-btn{
-  font-size: 2rem;
-  font-weight: bold;
-  padding: 10px 20px;
-  color: white;
-  background-color:#010142;
-  border: 0px;
-  border-radius: 5px;
-}
-.p1content{
-  padding: 10%;
-}
-/* Basic styling for demonstration */
-body {
-font-family: sans-serif;
-margin: 0;
-}
-/* Ensuring navbar is styled properly */
-.navbar {
-background-color: #f8f9fa;
-padding: 10px;
-}
+        /* Parent-1 section - Hero section */
+        .parent-1 {
+            color: #010142;
+            display: flex;
+            flex-direction: row;
+        }
 
-/* Customizing the dropdown menu */
-.navbar-nav .dropdown-menu {
-background-color: #ffffff;
-}
+        .parent1-left {
+            background-color: #aed6f1;
+            width: 50%;
+            display: flex;
+            align-items: center;
+        }
 
-/* Styling the dropdown links */
-.navbar-nav .dropdown-menu .dropdown-item {
-color: #333;
-transition: 0.3s;
-}
+        .parent1-right {
+            width: 50%;
+            height: auto;
+            object-fit: cover;
+        }
 
-.navbar-nav .dropdown-menu .dropdown-item:hover {
-background-color: #f1f1f1;
-}
+        .p1-text1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
 
-/* Making sure toggler is properly aligned */
-.navbar-toggler {
-border: none;
-outline: none;
-}
+        .p1-text2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
 
-/* Responsive adjustments */
-@media (max-width: 992px) {
-.navbar-collapse {
-    background-color: #ffffff;
-    padding: 10px;
-    border-radius: 5px;
-}
+        .p1-btn {
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 10px 20px;
+            color: white;
+            background-color: #010142;
+            border: 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
-.navbar-nav {
-    flex-direction: column;
-}
+        .p1-btn:hover {
+            background-color: #02026e;
+        }
 
-.navbar-nav .nav-item {
-    margin-bottom: 10px;
-}
-}
+        .p1content {
+            padding: 10%;
+        }
 
+        /* Navbar styling */
+        #navbar1 {
+            padding: 10px 0;
+        }
 
+        #nav1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 0 15px;
+        }
 
-#navbar2{
-  background-color: #d2b4de  ;
-  padding: 25px;
-}
-#navitems{
-  display: flex;
-  gap: 30px;
-}
-#navbar1{
-box-sizing: border-box;
-margin: 0px;
-padding: 0px;
-}
-#nav1{
-display: flex;
-justify-content: space-between;
-}
-.nav1-icons a{
-text-decoration: none;
-}
+        .nav1-icons {
+            display: flex;
+            align-items: center;
+        }
 
-.nav1-icons {
-display: flex;
-align-items: center;
-}
+        .nav1-icons i {
+            margin-right: 15px;
+            font-size: 1.5rem;
+            color: #444;
+            transition: color 0.3s;
+        }
 
-.nav1-icons i {
-margin-right: 15px;
-font-size: 1.5rem;
-color: #444;
+        .nav1-icons i:hover {
+            color: #d2b4de;
+        }
 
-}
-.navitems2{
-display: flex;
-gap: 10%;
-}
-.navitems2 li{
-font-size: 1.3rem;
-}
+        #navbar2 {
+            background-color: #d2b4de;
+            padding: 15px;
+        }
 
-body {
-font-family: Arial, sans-serif;
-}
+        #navitems {
+            display: flex;
+            gap: 30px;
+        }
 
+        /* Candy container */
+        #candy-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 30px;
+        }
 
-#candy-container{
-box-sizing: border-box;
-display: flex;
-flex-direction: row;
-gap: 20px;
-flex-wrap: wrap;
-width: 100vw;
-justify-content: space-around;
-padding: 30px;
-}
-#candy-container img{
-width: 230px;
-height: 200px;
-}
-.candy-item {
-border: 1px solid #ccc;
-padding: 10px;
-width: 250px;
-box-shadow: 5px 3px 7px rgba(75, 74, 74, 0.323);
-text-align: center;
-}
-.rating{
-margin-bottom: 10px;
-padding: 3px;
-border-radius: 5px;
-border: 0px;
-background-color:rgb(164, 228, 237);
-}
-.addToCartBtn{
-  display: inline;
-  border: 0.5px solid rgba(50, 49, 49, 0.584);
-  background-color:rgb(248, 184, 205) ;
-  padding: 5px;
-  border-radius: 5px ;
-}
-/* #card-button{
-display: flex;
-gap: 10px;
-padding-top:10px;
-justify-content: space-between;
-} */
-/* #card-button button{
-border: 0px;
-padding: 10px;
-border-radius: 2px;
-} */
-.footer{
-padding: 15px;
-text-align: center;
-background-color: rgb(232, 127, 146);
-}
+        .candy-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 280px;
+            box-shadow: 5px 3px 7px rgba(75, 74, 74, 0.323);
+            text-align: center;
+            transition: transform 0.3s;
+        }
 
+        .candy-item:hover {
+            transform: translateY(-5px);
+        }
 
-.heart-icon {
-position: absolute;
-top: 10px;
-font-size: 1.5rem;
-right: 10px;
+        .candy-image {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
 
-cursor: pointer;
-background-color: white;
-padding: 7px;
-border-radius: 100%;
+        .addToCartBtn {
+            background-color: #e095b3;
+            border: none;
+            color: black;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
 
-}
-.red-heart {
-color: red;
-}
+        .addToCartBtn:hover {
+            background-color: #e373af;
+        }
 
-.image-wrapper {
-position: relative;
-display: inline-block;
-}
+        /* Heart icon styling */
+        .img-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
 
-.heart-icon {
-position: absolute;
-top: 10px;
-right: 10px;
-font-size: 24px;
-color: blue; 
-transition: color 0.3s ease;
-}
+        .heart-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 20px;
+            color: black;
+            background-color: white;
+            padding: 8px;
+            border-radius: 50%;
+            transition: all 0.3s ease-in-out;
+            z-index: 2;
+        }
 
-.red-heart {
-color: red !important;
-}
+        .heart-icon:hover {
+            transform: scale(1.2);
+        }
 
-.heart-icon:hover {
-transform: scale(1.2);
-}
+        .heart-icon.red-heart {
+            color: red;
+        }
 
+        /* Footer */
+        .footer {
+            padding: 15px;
+            text-align: center;
+            background-color: rgb(232, 127, 146);
+            color: white;
+        }
 
-.candy-item {
-position: relative;
-width: 280px; 
-}
+        /* Custom alert */
+        .custom-alert {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+            font-size: 16px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            transform: translateY(20px);
+            z-index: 9999;
+        }
 
-.img-wrapper {
-position: relative;
-display: inline-block;
-}
+        .custom-alert.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-.candy-image {
-width: 270px;
-height:250px;
-display: block;
-border-radius: 8px;
-padding: 10px;
-}
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .p1-text1 {
+                font-size: 2.5rem;
+            }
+            .p1-text2 {
+                font-size: 1.8rem;
+            }
+            .p1-btn {
+                font-size: 1.8rem;
+            }
+        }
 
-.heart-icon {
-position: absolute;
-top: 10px;
-right: 10px;
-font-size: 20px;
-color: black;
-transition: color 0.3s ease-in-out;
-}
+        @media (max-width: 992px) {
+            .parent-1 {
+                flex-direction: column;
+            }
+            .parent1-left, .parent1-right {
+                width: 100%;
+            }
+            .parent1-right {
+                height: 400px;
+            }
+            .p1content {
+                padding: 5% 10%;
+            }
+            #navitems {
+                gap: 15px;
+            }
+        }
 
-.heart-icon.red-heart {
-color: red;
-}
+        @media (max-width: 768px) {
+            #nav1 {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+            .navbar-brand {
+                margin-bottom: 15px;
+            }
+            #searchForm {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            .p1-text1 {
+                font-size: 2rem;
+            }
+            .p1-text2 {
+                font-size: 1.5rem;
+            }
+            .p1-btn {
+                font-size: 1.5rem;
+            }
+            .parent1-right {
+                height: 350px;
+            }
+        }
 
-.addToCartBtn {
-  background-color: #e095b3; 
-  border: none;
-  color:black;
-  padding: 10px 20px;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.addToCartBtn:hover {
-  background-color: #e373af;
-}
+        @media (max-width: 576px) {
+            .p1-text1 {
+                font-size: 1.8rem;
+            }
+            .p1-text2 {
+                font-size: 1.2rem;
+            }
+            .p1-btn {
+                font-size: 1.2rem;
+                padding: 8px 16px;
+            }
+            .parent1-right {
+                height: 300px;
+            }
+            #candy-container {
+                padding: 15px;
+            }
+            .candy-item {
+                width: 100%;
+                max-width: 300px;
+            }
+            .navbar-collapse {
+                padding-top: 15px;
+            }
+            #navitems {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }

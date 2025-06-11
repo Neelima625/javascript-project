@@ -6,18 +6,21 @@ document.addEventListener('DOMContentLoaded', () => {
       candyDetailsDiv.innerHTML = `
           <div class="card"><div>
               <img src="${selectedCandy.image}" class="card-img-top" alt="${selectedCandy.name}">
-                <div class="shop-btns">
-                      <button id="addToCart">Add to Cart</button>
-                      <button id="buyNow">Buy Now</button>
-                  </div>
+              
               </div>
               <div class="card-body">
-                  <h2 class="card-title">${selectedCandy.name}</h2>
-                  <p class="card-text">Flavour: ${Array.isArray(selectedCandy.flavour) ? selectedCandy.flavour.join(', ') : selectedCandy.flavour}</p>
-                  <p class="card-text">Brand: ${selectedCandy.brand}</p>
-                  <p class="card-text">Price: ${selectedCandy.price}&#8377;</p>
-                  <p class="card-text">Rating:<button><span class="fa fa-star checked"></span> ${selectedCandy.rating}</button></p>
-                
+               <h2 class="name">${selectedCandy.name}</h2>
+                  <div class="line-1">
+                 <span class="card-text">Flavour: ${Array.isArray(selectedCandy.flavour) ? selectedCandy.flavour.join(', ') : selectedCandy.flavour}  &nbsp|&nbsp Price: ${selectedCandy.price}&#8377;
+                 </span>
+            </div>
+            <div >
+                <span class="card-text">Brand: ${selectedCandy.brand}  &nbsp|&nbsp Rating:<button class=" rating fa fa-star checked"> ${selectedCandy.rating}</button></span>
+            </div>
+                 <div class="shop-btns">
+                      <button id="addToCart">Add to Cart</button>
+                      
+                  </div>
               </div>
           </div>
       `;
@@ -39,10 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
           alert('Added to cart!');
       });
 
-      // Buy Now Button (Redirect to Cart Page)
-      // document.getElementById('buyNow').addEventListener('click', () => {
-      //     window.location.href = 'cart.html'; // Change to your cart page
-      // });
+      
   } else {
       candyDetailsDiv.innerHTML = "<p>No candy details found.</p>";
   }

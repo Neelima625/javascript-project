@@ -1,12 +1,390 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Candy Details</title>
-    <link rel="stylesheet" href="./addcart.css">
+    <title>Shopping Cart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* [same CSS from your original code — unchanged] */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
 
+        .navbar {
+            background-color: #d2b4de;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 6px 0;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-icons a {
+            color: #333;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .wrapper {
+            display: flex;
+            gap: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #343333d6;
+        }
+
+        .cart-items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .cart-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            position: relative;
+        }
+
+        .cart-image-container {
+            flex: 0 0 120px;
+        }
+
+        .cart-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .cart-details {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .cart-item h3 {
+            margin-top: 0;
+            color: #181515;
+        }
+
+        .cart-item p {
+            margin: 8px 0;
+        }
+
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .quantity-controls button {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .item-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .increase, .decrease {
+            background-color: #f8c1d9;
+            color: #333;
+        }
+
+        .remove-btn {
+            background-color: #ff6b6b;
+            color: rgb(39, 33, 33);
+            width: 150px;
+        }
+
+        .wishlist-btn {
+            background-color: skyblue;
+            color: rgb(37, 32, 32);
+            width: 150px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .total-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-top: 30px;
+            text-align: right;
+        }
+
+        .total-container h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        #checkoutBtn {
+            background-color: #4c87af;
+            color: rgb(29, 27, 27);
+            padding: 12px 25px;
+            font-size: 1rem;
+            margin-top: 15px;
+            width: 200px;
+            margin-bottom: 40px;
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 50px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .empty-cart h3 {
+            color: black;
+        }
+
+        footer {
+            background-color: #e38787;
+            color: rgb(42, 41, 41);
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .cart-item {
+                flex-direction: column;
+            }
+
+            .cart-image-container {
+                flex: 0 0 auto;
+                text-align: center;
+            }
+
+            .cart-image {
+                max-width: 150px;
+            }
+
+            .item-actions {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
-<body> 
-     <div id="candyDetails"></div>
-    <script src="./addcart.js"></script>
+<body>
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../Home page/home.html">
+            <img src="https://www.candystore.com/cdn/shop/files/brand-candy-store.svg?v=1710528542&width=210" alt="Candy Store">
+        </a>
+        <div class="nav-icons">
+            <a href="#" id="wishlistPage">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+           
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Your Shopping Cart</h1>
+    <div id="candyDetails"></div>
+</div>
+
+<footer>
+    <p>&copy; Copyrights 2008-25. All Rights Reserved. Privacy | Terms | Infringement</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const cartContainer = document.getElementById('candyDetails');
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+        function updateCartUI() {
+            cartContainer.innerHTML = '';
+
+            if (cart.length === 0) {
+                cartContainer.innerHTML = `
+                    <div class="empty-cart">
+                        <h3>Your cart is empty</h3>
+                        <p>Looks like you haven't added anything to your cart yet</p>
+                        <a href="../Home page/home.html" class="btn btn-primary">Continue Shopping</a>
+                    </div>
+                `;
+                return;
+            }
+
+            let totalPrice = 0;
+            let totalQuantity = 0;
+            const itemsContainer = document.createElement('div');
+            itemsContainer.className = 'cart-items';
+
+            cart.forEach(candy => {
+                totalPrice += candy.price * candy.quantity;
+                totalQuantity += candy.quantity;
+
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'cart-item';
+                itemDiv.innerHTML = `
+                    <div class='wrapper'>
+                        <div class="cart-image-container">
+                            <img src="${candy.image}" alt="${candy.name}" class="cart-image">
+                        </div>
+                        <div class="cart-details">
+                            <h3>${candy.name}</h3>
+                            <div class="quantity-controls">
+                                <p><strong>Price:</strong> ${candy.price}₹</p> &nbsp;
+                                <button class="decrease" data-name="${candy.name}">-</button>
+                                <span>${candy.quantity}</span>
+                                <button class="increase" data-name="${candy.name}">+</button>
+                            </div>
+                            <div class="item-actions">
+                                <button class="remove-btn" data-name="${candy.name}">Remove</button>
+                                <button class="wishlist-btn" data-name="${candy.name}">Move to Wishlist</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                itemsContainer.appendChild(itemDiv);
+            });
+
+            cartContainer.appendChild(itemsContainer);
+
+            const totalContainer = document.createElement('div');
+            totalContainer.className = 'total-container';
+            totalContainer.innerHTML = `
+                <h3>Total Items: ${totalQuantity}</h3>
+                <h3>Total Price: ${totalPrice}₹</h3>
+                <button id="checkoutBtn">Proceed to pay</button>
+            `;
+            cartContainer.appendChild(totalContainer);
+
+            attachEventListeners();
+        }
+
+        function attachEventListeners() {
+            document.querySelectorAll('.remove-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const name = e.target.dataset.name;
+                    cart = cart.filter(item => item.name !== name);
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateCartUI();
+                });
+            });
+
+            document.querySelectorAll('.increase').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const name = e.target.dataset.name;
+                    const item = cart.find(i => i.name === name);
+                    if (item) item.quantity++;
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateCartUI();
+                });
+            });
+
+            document.querySelectorAll('.decrease').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const name = e.target.dataset.name;
+                    const item = cart.find(i => i.name === name);
+                    if (item && item.quantity > 1) {
+                        item.quantity--;
+                    } else {
+                        cart = cart.filter(i => i.name !== name);
+                    }
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateCartUI();
+                });
+            });
+
+            document.querySelectorAll('.wishlist-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const name = e.target.dataset.name;
+                    moveToWishlist(name);
+                });
+            });
+
+            const checkoutBtn = document.getElementById('checkoutBtn');
+            if (checkoutBtn) {
+                checkoutBtn.addEventListener('click', () => {
+                    let totalPrice = 0;
+                    cart.forEach(item => totalPrice += item.price * item.quantity);
+                    localStorage.setItem('totalPrice', totalPrice);
+                    window.location.href = '../buy_now/buynow.html';
+                });
+            }
+        }
+
+        function moveToWishlist(name) {
+            const index = cart.findIndex(item => item.name === name);
+            if (index !== -1) {
+                const item = cart[index];
+                if (!wishlist.find(i => i.name === item.name)) {
+                    wishlist.push(item);
+                }
+                cart.splice(index, 1);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                localStorage.setItem('wishlist', JSON.stringify(wishlist));
+                updateCartUI();
+                
+            }
+        }
+
+        updateCartUI();
+    });
+</script>
 </body>
 </html>
